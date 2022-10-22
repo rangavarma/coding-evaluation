@@ -1,4 +1,3 @@
-
 package com.aa.act.interview.org;
 
 public class Employee {
@@ -23,6 +22,6 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return ", Name :"+name.toString() +  ", Identifier : " + identifier;
+		return " Name :"+name.toString() +  ", Identifier : " + identifier;
 	}
 }
