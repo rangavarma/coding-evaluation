@@ -31,6 +31,10 @@ public abstract class Organization {
 	 * @return the newly filled position or empty if no position has that title
 	 */
 	public Optional<Position> hire(Name person, String title) {
+		if(title == null || title.isEmpty())
+			throw new IllegalArgumentException("title cannot be null/empty");
+		if(person == null)
+			throw new IllegalArgumentException("person cannot be null");
 		// This is to fill only root element value employee details
 		fillReportiesEmpDetails(root, person, title);
 		// This is to populate recursively Employee details as they are null
